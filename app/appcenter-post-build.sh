@@ -1,5 +1,7 @@
 #find / -iname '*apksigner*'
-cat /Users/vsts/agent/2.129.1/scripts/install-keystore.sh
+
+
+/Users/vsts/agent/2.129.1/scripts/install-keystore.sh
 
 
 
