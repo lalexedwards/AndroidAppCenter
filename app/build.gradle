@@ -11,15 +11,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-
-    productFlavors {
-        prod {
-            applicationId "com.example.surra.androidappcenter"
-        }
-        dev {
-            applicationId "com.example.surra.androidappcenter"
-        }
-    }
+    
 
     signingConfigs {
         releaseSigningConfig {
