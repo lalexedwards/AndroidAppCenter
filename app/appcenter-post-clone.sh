@@ -8,4 +8,6 @@ echo  'export APPCENTER_KEY_PASSWORD=$keyPass' >> ~/.gradlerc
 #source ~/.gradlerc
 
 cat ~/.bashrc
-#cat ~/.gradlerc 
+cat ~/.gradlerc 
+
+source ~/.bashrc
