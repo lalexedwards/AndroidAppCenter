@@ -15,9 +15,9 @@ android {
     signingConfigs {
         releaseSigningConfig {
         storeFile rootProject.file("app/shawn.jks")
-            storePassword System.getProperty("keystorePass")
-            keyAlias System.getProperty("alias")
-            keyPassword System.getProperty("keyPass")
+            storePassword "${keystorePass}"
+            keyAlias "${alias}"
+            keyPassword "${keyPass}"
         }
     }
 
