@@ -1,13 +1,7 @@
 set -ex
-echo 'source ~/.gradlerc' >> ~/.bashrc 
 
-echo 'export APPCENTER_KEYSTORE_PASSWORD=$keystorePass' >> ~/.gradlerc
-echo  'export APPCENTER_KEY_ALIAS=$alias' >> ~/.gradlerc 
-echo  'export APPCENTER_KEY_PASSWORD=$keyPass' >> ~/.gradlerc 
 
-#source ~/.gradlerc
+echo 'ORG_GRADLE_PROJECT_keystorePass=$keystorePass' >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
+echo  'ORG_GRADLE_PROJECT_alias=$alias' >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
+echo  ' ORG_GRADLE_PROJECT_keyPass=$keyPass' >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
 
-cat ~/.bashrc
-cat ~/.gradlerc 
-
-source ~/.bashrc
