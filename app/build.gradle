@@ -14,10 +14,10 @@ android {
 
     signingConfigs {
         releaseSigningConfig {
-            storeFile file("${keystore}")
-            storePassword "${keystore_password}"
-            keyAlias "${key_alias}"
-            keyPassword "${key_password}"
+            storeFile rootProject.file("app/shawn.jks")
+            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
+            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
         }
     }
 
