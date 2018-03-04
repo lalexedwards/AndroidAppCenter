@@ -5,12 +5,22 @@ android {
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "com.example.surra.androidappcenter"
-        minSdkVersion 15
+        minSdkVersion 20
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        releaseSigningConfig {
+            storeFile file("${keystore}")
+            storePassword "${keystore_password}"
+            keyAlias "${key_alias}"
+            keyPassword "${key_password}"
+        }
+    }
+
 
     buildTypes {
         release {
