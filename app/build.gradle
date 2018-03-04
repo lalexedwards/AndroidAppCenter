@@ -14,10 +14,10 @@ android {
 
     signingConfigs {
         releaseSigningConfig {
-            storeFile rootProject.file("app/shawn.jks")
-            storePassword "93289328"
-            keyAlias "shawn"
-            keyPassword "93289328"
+        storeFile rootProject.file("app/shawn.jks")
+            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
+            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
         }
     }
 
@@ -26,6 +26,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseSigningConfig
         }
     }
 }
