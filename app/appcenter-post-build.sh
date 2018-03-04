@@ -7,4 +7,4 @@
 #$APPCENTER_OUTPUT_DIRECTORY/*.apk
 
 
-/Users/vsts/Library/Android/sdk/build-tools/27.0.3/apksigner verify $APPCENTER_OUTPUT_DIRECTORY/*.apk
+#/Users/vsts/Library/Android/sdk/build-tools/27.0.3/apksigner verify $APPCENTER_OUTPUT_DIRECTORY/*.apk
