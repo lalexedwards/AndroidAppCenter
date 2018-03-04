@@ -1,7 +1,6 @@
 set -ex
 
-
-#echo 'org.gradle.project.keystorePass=' >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
-#echo  'org.gradle.project.alias=' >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
-#echo  'org.gradle.project.keyPass=' >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
+echo 'keystore_password='$keystorePass >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
+echo 'key_alias='$alias >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
+echo 'key_password='$keyPass >> $APPCENTER_SOURCE_DIRECTORY/gradle.properties
 cat $APPCENTER_SOURCE_DIRECTORY/gradle.properties
