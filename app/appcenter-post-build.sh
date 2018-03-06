@@ -11,7 +11,7 @@
          --ks-key-alias $alias \
          --key-pass pass:$keyPass \
          #$APPCENTER_OUTPUT_DIRECTORY/*.apk
-         
+        exit 1 
      echo $AGENT_JOBSTATUS 
 /Users/vsts/Library/Android/sdk/build-tools/27.0.3/apksigner --help
 
