@@ -12,22 +12,22 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
+    /*signingConfigs {
         releaseSigningConfig {
         storeFile rootProject.file("app/shawn.jks")
              storePassword "${keystore_password}"
              keyAlias "${key_alias}"
              keyPassword "${key_password}"
         }
-    }
+    } */
 
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.releaseSigningConfig
-            zipAlignEnabled true
+            //signingConfig signingConfigs.releaseSigningConfig
+            //zipAlignEnabled true
 
         }
     }
