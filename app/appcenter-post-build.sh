@@ -10,7 +10,7 @@
          --ks-pass pass:$keystorePass \
          --ks-key-alias $alias \
          --key-pass pass:$keyPass \
-         #$APPCENTER_OUTPUT_DIRECTORY/*.apk
+         $APPCENTER_OUTPUT_DIRECTORY/*.apk
         
      echo $AGENT_JOBSTATUS 
 /Users/vsts/Library/Android/sdk/build-tools/27.0.3/apksigner --help
