@@ -6,3 +6,4 @@
 
 find blah blah blah
 echo $AGENT_JOBSTATUS 
+echo $BUILD_REASON
