@@ -29,16 +29,16 @@ android {
             //signingConfig signingConfigs.releaseSigningConfig
             zipAlignEnabled true
 
-        }
+        } 
         
          staging {
                 debuggable false
                 minifyEnabled false
-                buildConfigField "boolean", "IS_DEBUG", "true"
+               //buildConfigField "boolean", "IS_DEBUG", "true"
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-                signingConfig signingConfigs.stagingCfg
+                //signingConfig signingConfigs.stagingCfg
 
-                matchingFallbacks = ['release']
+                //matchingFallbacks = ['release']
             }
     }
 }
