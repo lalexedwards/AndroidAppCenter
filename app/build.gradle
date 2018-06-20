@@ -15,7 +15,7 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file("$APPCENTER_SOURCE_DIRECTORY/keystores/debug.keystore")
+            storeFile file("/Users/vsts/agent/2.134.2/work/1/s/keystores/debug.keystore")
             keyAlias "androiddebugkey"
             storePassword "android"
             keyPassword "android"
