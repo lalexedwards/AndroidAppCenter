@@ -40,13 +40,7 @@ android {
         }
     }
    
-    flavorDimensions "coverninja"
-    productFlavors {
-        dev {
-            applicationIdSuffix ".dev"
-            dimension "coverninja"
-        }
-    }
+ 
     
 
 dependencies {
