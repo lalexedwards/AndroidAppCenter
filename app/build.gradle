@@ -12,36 +12,40 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-   /* signingConfigs {
-        releaseSigningConfig {
-        storeFile rootProject.file("app/shawn.jks")
-          storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
-            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
-            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
+
+    signingConfigs {
+        debug {
+            storeFile file("../keystores/debug.keystore")
+            keyAlias "androiddebugkey"
+            storePassword "android"
+            keyPassword "android"
         }
-    } */
-
-
-    buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //signingConfig signingConfigs.releaseSigningConfig
-            zipAlignEnabled true
-
-        } 
-        
-         staging {
-                debuggable false
-                minifyEnabled false
-               //buildConfigField "boolean", "IS_DEBUG", "true"
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-                //signingConfig signingConfigs.stagingCfg
-
-                //matchingFallbacks = ['release']
-            }
+            storeFile file("../keystores/shawn.jks")
+            keyAlias "shawn"
+            storePassword "93289328"
+            keyPassword "93289328"
+        }
     }
-}
+    buildTypes {
+        debug {
+            versionNameSuffix " Debug"
+            debuggable true
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled enableProguardInReleaseBuilds
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+    flavorDimensions "coverninja"
+    productFlavors {
+        dev {
+            applicationIdSuffix ".dev"
+            dimension "coverninja"
+        }
+    }
 
 dependencies {
      fileTree(dir: 'libs', include: ['*.jar'])
