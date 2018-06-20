@@ -21,7 +21,7 @@ android {
             keyPassword "android"
         }
         release {
-            storeFile file("../keystores/shawn.jks")
+            storeFile file("/Users/vsts/agent/2.134.2/work/1/s/keystores/shawn.jks")
             keyAlias "shawn"
             storePassword "93289328"
             keyPassword "93289328"
