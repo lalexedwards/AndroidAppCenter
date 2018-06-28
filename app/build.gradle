@@ -15,16 +15,10 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file("/Users/vsts/agent/2.134.2/work/1/s/keystores/debug.keystore")
-            keyAlias "androiddebugkey"
-            storePassword "android"
-            keyPassword "android"
+      
         }
         release {
-            storeFile file("/Users/vsts/agent/2.134.2/work/1/s/keystores/shawn.jks")
-            keyAlias "shawn"
-            storePassword "93289328"
-            keyPassword "93289328"
+         
         }
     }
     buildTypes {
@@ -34,7 +28,7 @@ android {
         }
 
         release {
-            signingConfig signingConfigs.release
+           
             //minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
