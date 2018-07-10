@@ -34,7 +34,21 @@ android {
         }
     }
    
- 
+  productFlavors {
+stage {
+dimension "full"
+applicationIdSuffix ".stage"
+//signingConfig signingConfigs.stage
+//buildConfigField "String", "CODEPUSH_KEY", '"KEY"'
+//buildConfigField "String", "BUILD_ENVIRONMENT", '"STAGE"'
+}
+prod {
+dimension "full"
+//signingConfig signingConfigs.release
+//buildConfigField "String", "CODEPUSH_KEY", '"KEY"'
+//buildConfigField "String", "BUILD_ENVIRONMENT", '"PROD"'
+}
+}
     
 
 dependencies {
